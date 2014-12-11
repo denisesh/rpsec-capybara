@@ -43,7 +43,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event = Event.find(params[:id])
+    @event = Event.find(params[:id]) #fixed the misspelling
     @event.destroy #does not need a parameter
     redirect_to events_path
   end
